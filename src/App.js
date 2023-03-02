@@ -6,9 +6,9 @@ import Advantages from './components/advantages/Advantages';
 function App() {
   return (
     <>
-    <Navbar />
-    <HomeSection />
-    <Advantages />
+      <Navbar />
+      <HomeSection />
+      <Advantages />
     </>
   );
 }
