@@ -1,5 +1,5 @@
 import React from 'react';
-import { AdvantagesWrap } from './styles';
+// import { AdvantagesWrap } from './styles';
 
 function Advantages() {
   return (
@@ -19,8 +19,8 @@ function Advantages() {
               <div className='icon'>
                 <i className='flaticon-location' />
                 <div className='icon-bg'>
-                  <img src='/images/icon-bg1.png' alt='image' />
-                  <img src='/images/icon-bg2.png' alt='image' />
+                  <img src='/images/icon-bg1.png' alt='advantage-icon' />
+                  <img src='/images/icon-bg2.png' alt='advantage-icon' />
                 </div>
               </div>
               <h3>Расположение в центре города</h3>
@@ -30,8 +30,8 @@ function Advantages() {
                 пересечении улиц Красноармейской, Бассейной и Крещатик.
               </p>
               <div className='box-shape'>
-                <img src='/images/box-shape1.png' alt='image' />
-                <img src='/images/box-shape2.png' alt='image' />
+                <img src='/images/box-shape1.png' alt='advantage-icon' />
+                <img src='/images/box-shape2.png' alt='advantage-icon' />
               </div>
             </div>
           </div>
@@ -40,8 +40,8 @@ function Advantages() {
               <div className='icon'>
                 <i className='flaticon-work' />
                 <div className='icon-bg'>
-                  <img src='/images/icon-bg1.png' alt='image' />
-                  <img src='/images/icon-bg2.png' alt='image' />
+                  <img src='/images/icon-bg1.png' alt='advantage-icon' />
+                  <img src='/images/icon-bg2.png' alt='advantage-icon' />
                 </div>
               </div>
               <h3>
@@ -53,8 +53,8 @@ function Advantages() {
               </p>
 
               <div className='box-shape'>
-                <img src='/images/box-shape1.png' alt='image' />
-                <img src='/images/box-shape2.png' alt='image' />
+                <img src='/images/box-shape1.png' alt='advantage-icon' />
+                <img src='/images/box-shape2.png' alt='advantage-icon' />
               </div>
             </div>
           </div>
@@ -63,8 +63,8 @@ function Advantages() {
               <div className='icon'>
                 <i className='flaticon-room' />
                 <div className='icon-bg'>
-                  <img src='/images/icon-bg1.png' alt='image' />
-                  <img src='/images/icon-bg2.png' alt='image' />
+                  <img src='/images/icon-bg1.png' alt='advantage-icon' />
+                  <img src='/images/icon-bg2.png' alt='advantage-icon' />
                 </div>
               </div>
               <h3>
@@ -76,8 +76,8 @@ function Advantages() {
               </p>
 
               <div className='box-shape'>
-                <img src='/images/box-shape1.png' alt='image' />
-                <img src='/images/box-shape2.png' alt='image' />
+                <img src='/images/box-shape1.png' alt='advantage-icon' />
+                <img src='/images/box-shape2.png' alt='advantage-icon' />
               </div>
             </div>
           </div>
@@ -86,8 +86,8 @@ function Advantages() {
               <div className='icon'>
                 <i className='flaticon-location' />
                 <div className='icon-bg'>
-                  <img src='/images/icon-bg1.png' alt='image' />
-                  <img src='/images/icon-bg2.png' alt='image' />
+                  <img src='/images/icon-bg1.png' alt='advantage-icon' />
+                  <img src='/images/icon-bg2.png' alt='advantage-icon' />
                 </div>
               </div>
               <h3>
@@ -99,8 +99,8 @@ function Advantages() {
                 этаже.
               </p>
               <div className='box-shape'>
-                <img src='/images/box-shape1.png' alt='image' />
-                <img src='/images/box-shape2.png' alt='image' />
+                <img src='/images/box-shape1.png' alt='advantage-icon' />
+                <img src='/images/box-shape2.png' alt='advantage-icon' />
               </div>
             </div>
           </div>
