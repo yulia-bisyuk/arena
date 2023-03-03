@@ -41,25 +41,25 @@ const Footer = () => {
             <div className='row align-items-center'>
               <div className='col-lg-6 col-sm-6 col-md-6'>
                 <p>
-                  <i className='far fa-copyright' /> Дизайн{' '}
-                  <a
-                    href='https://envytheme.com/'
-                    target='_blank'
-                    rel='noreferrer'
-                  >
-                    EnvyTheme
-                  </a>
-                  <p>
-                    {' '}
-                    Розробка{' '}
-                    <a
-                      href='https://t.me/dedvitalik'
-                      target='_blank'
-                      rel='noreferrer'
-                    >
-                      @dedVitalik
-                    </a>
-                  </p>
+                  <i className='far fa-copyright' /> Arena City{' '}
+                  {/*<a*/}
+                  {/*  href='https://envytheme.com/'*/}
+                  {/*  target='_blank'*/}
+                  {/*  rel='noreferrer'*/}
+                  {/*>*/}
+                  {/*  EnvyTheme*/}
+                  {/*</a>*/}
+                  {/*<p>*/}
+                  {/*  {' '}*/}
+                  {/*  Розробка{' '}*/}
+                  {/*  <a*/}
+                  {/*    href='https://t.me/dedvitalik'*/}
+                  {/*    target='_blank'*/}
+                  {/*    rel='noreferrer'*/}
+                  {/*  >*/}
+                  {/*    @dedVitalik*/}
+                  {/*  </a>*/}
+                  {/*</p>*/}
                 </p>
               </div>
               <div className='col-lg-6 col-sm-6 col-md-6'>
