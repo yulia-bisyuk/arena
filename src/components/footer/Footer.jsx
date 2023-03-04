@@ -2,7 +2,7 @@ import { FooterWrap } from './styles';
 
 const Footer = () => {
   return (
-    <FooterWrap>
+    <FooterWrap id={'contacts'}>
       <footer className='footer-area'>
         <div className='container'>
           <div className='footer-positioning'>

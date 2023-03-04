@@ -3,7 +3,7 @@ import React from 'react';
 
 function Advantages() {
   return (
-    <section className='services-area pt-100 pb-70'>
+    <section className='services-area pt-100 pb-70' id='advantages'>
       <div className='container'>
         <div className='section-title'>
           <h2>Офісний центр преміум класу</h2>

@@ -23,11 +23,10 @@ function Navbar() {
                 className="icon-bar middle-bar"/><span className="icon-bar bottom-bar"/></button>
               <div className={`collapse navbar-collapse ${mobNavActive ? 'show' : ''}`}
                    id="navbarSupportedContent">
-                <ul className="navbar-nav">
-                  <li className="nav-item"><a className="nav-link" href="/about/">На початок</a></li>
-                  <li className="nav-item"><a className="nav-link" href="gallery">Про бізнес-центр</a></li>
+                <ul className="navbar-nav" onClick={() => setMobNavActive(!mobNavActive)}>
+                  <li className="nav-item"><a className="nav-link" href="#advantages">Про бізнес-центр</a></li>
                   <li className="nav-item"><a className="nav-link" href="#gallery">Галерея</a></li>
-                  <li className="nav-item"><a className="nav-link" href="/the-place/">Контакти</a></li>
+                  <li className="nav-item"><a className="nav-link" href="#contacts">Контакти</a></li>
                 </ul>
                 <div className="others-option">
                   <div className="call-us">
