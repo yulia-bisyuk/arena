@@ -3,7 +3,7 @@ import { GalleryWrapper } from './styles';
 
 function Gallery() {
   return (
-    <GalleryWrapper>
+    <GalleryWrapper id={'gallery'}>
       <div className='gallery-area pt-100'>
         <div className='container'>
           <div className='section-title'>

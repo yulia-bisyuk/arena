@@ -2,6 +2,8 @@ import React from 'react';
 import {NavbarWrapper} from './styles';
 
 function Navbar() {
+  const [mobNavActive, setMobNavActive] = React.useState(false);
+  
   return (
     <NavbarWrapper>
       <div id="navbar" className="navbar-area navbar-style-two">
@@ -13,16 +15,18 @@ function Navbar() {
               <img src="/images/logo.png" alt="logo"
                    className="logo"/>
             </a>
-              <button className="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse"
+              <button className={`navbar-toggler navbar-toggler-right ${!mobNavActive ? 'collapsed' : ''}`}
+                      onClick={() => setMobNavActive(!mobNavActive)}
+                      type="button" data-toggle="collapse"
                       data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                       aria-label="Toggle navigation"><span className="icon-bar top-bar"/><span
                 className="icon-bar middle-bar"/><span className="icon-bar bottom-bar"/></button>
-              <div className="collapse navbar-collapse" id="navbarSupportedContent">
+              <div className={`collapse navbar-collapse ${mobNavActive ? 'show' : ''}`}
+                   id="navbarSupportedContent">
                 <ul className="navbar-nav">
-                  
                   <li className="nav-item"><a className="nav-link" href="/about/">На початок</a></li>
-                  <li className="nav-item"><a className="nav-link" href="/the-place/">Про бізнес-центр</a></li>
-                  <li className="nav-item"><a className="nav-link" href="/the-place/">Галерея</a></li>
+                  <li className="nav-item"><a className="nav-link" href="gallery">Про бізнес-центр</a></li>
+                  <li className="nav-item"><a className="nav-link" href="#gallery">Галерея</a></li>
                   <li className="nav-item"><a className="nav-link" href="/the-place/">Контакти</a></li>
                 </ul>
                 <div className="others-option">
