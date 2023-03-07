@@ -1,8 +1,10 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {NavbarWrapper} from './styles';
+import useOutside from '../../hoocks/useOutside';
 
 function Navbar() {
-  const [mobNavActive, setMobNavActive] = React.useState(false);
+  const [mobNavActive, setMobNavActive] = useState(false);
+  // const {ref, isShow, setIsShow} = useOutside(false);
   
   return (
     <NavbarWrapper>
