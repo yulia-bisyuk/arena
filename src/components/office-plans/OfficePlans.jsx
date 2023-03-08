@@ -1,21 +1,19 @@
-// import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { PlansWrap } from './styles';
 import generalImg from './media/1.jpeg';
 
 function OfficePlans() {
-  //   const [isActive, setActive] = useState(false);
-  //   const [tabsContent, setTabsContent] = useState([]);
-
-  //   useEffect(() => {
-  //     setTabsContent(document.querySelectorAll('.tabs_item'));
-  //   }, []);
+  const [tabs, setTabs] = useState([
+    { id: 'tab1', active: false },
+    { id: 'tab2', active: false },
+    { id: 'tab3', active: false },
+    { id: 'tab4', active: false },
+    { id: 'tab5', active: false },
+    { id: 'tab6', active: false },
+  ]);
 
   const onTabClick = (e) => {
-    console.log(e.target.className);
-    // Array.from(tabsContent).map((tab) => {
-    //   if (tab.id === e.target.id) return setActive(true);
-
-    // });
+    setTabs((prevTabs) => [...prevTabs, { id: e.target.id, active: true }]);
   };
 
   return (
@@ -36,21 +34,21 @@ function OfficePlans() {
                   <li id='tab1' className='current'>
                     Про приміщення
                   </li>
-                  {/* <li id='tab2' className=''>
+                  <li id='tab2' className={tabs[1].active ? 'current' : ''}>
                     Поверх 1
                   </li>
-                  <li id='tab3' className=''>
+                  <li id='tab3' className={tabs[2].active ? 'current' : ''}>
                     Поверх 2
                   </li>
-                  <li id='tab4' className=''>
+                  <li id='tab4' className={tabs[3].active ? 'current' : ''}>
                     Поверх 3
                   </li>
-                  <li id='tab5' className=''>
+                  <li id='tab5' className={tabs[4].active ? 'current' : ''}>
                     Поверх 4
                   </li>
-                  <li id='tab6' className=''>
+                  <li id='tab6' className={tabs[5].active ? 'current' : ''}>
                     Поверх 5
-                  </li> */}
+                  </li>
                 </ul>
                 <div className='tab_content'>
                   <div
@@ -104,7 +102,7 @@ function OfficePlans() {
                       </div>
                     </div>
                   </div>
-                  {/* <div
+                  <div
                     id='tab2'
                     className='tabs_item'
                     style={{ display: 'none' }}
@@ -146,8 +144,8 @@ function OfficePlans() {
                         </div>
                       </div>
                     </div>
-                  </div> */}
-                  {/* <div
+                  </div>
+                  <div
                     id='tab3'
                     className='tabs_item'
                     style={{ display: 'none' }}
@@ -189,8 +187,8 @@ function OfficePlans() {
                         </div>
                       </div>
                     </div>
-                  </div> */}
-                  {/* <div
+                  </div>
+                  <div
                     id='tab4'
                     className='tabs_item'
                     style={{ display: 'none' }}
@@ -232,8 +230,8 @@ function OfficePlans() {
                         </div>
                       </div>
                     </div>
-                  </div> */}
-                  {/* <div
+                  </div>
+                  <div
                     id='tab5'
                     className='tabs_item'
                     style={{ display: 'none' }}
@@ -275,8 +273,8 @@ function OfficePlans() {
                         </div>
                       </div>
                     </div>
-                  </div> */}
-                  {/* <div
+                  </div>
+                  <div
                     id='tab6'
                     className='tabs_item'
                     style={{ display: 'none' }}
@@ -318,7 +316,7 @@ function OfficePlans() {
                         </div>
                       </div>
                     </div>
-                  </div> */}
+                  </div>
                 </div>
               </div>
             </div>
