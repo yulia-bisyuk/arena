@@ -1,5 +1,8 @@
 import React from 'react';
+import sprite from '../../icons/sprite.svg';
 // import { AdvantagesWrap } from './styles';
+
+// import { ReactComponent as ArrowIcon } from '../../assets/icons/icons-expand-more.svg';
 
 function Advantages() {
   return (
@@ -23,11 +26,10 @@ function Advantages() {
                   <img src='/images/icon-bg2.png' alt='advantage-icon' />
                 </div>
               </div>
-              <h3>Расположение в центре города</h3>
+              <h3>Розміщення в центрі міста</h3>
               <p>
-                Деловой центр находится в 5 минутах ходьбы от станций метро
-                Крещатик, Площадь Независимости и Площадь Льва Толстого, на
-                пересечении улиц Красноармейской, Бассейной и Крещатик.
+                Бізнес центр знаходиться в самому центрі ділового та історичного
+                Києва{' '}
               </p>
               <div className='box-shape'>
                 <img src='/images/box-shape1.png' alt='advantage-icon' />
@@ -45,11 +47,11 @@ function Advantages() {
                 </div>
               </div>
               <h3>
-                <a href='/service-details/'>Меблированные офисы под ключ</a>
+                <a href='/service-details/'>Вмебльовані офіси під ключ</a>
               </h3>
               <p>
-                Вы можете въехать в новый офис, когда захотите – в помещениях
-                сделан ремонт и установлена мебель.
+                При необхідності - оперативно та безкоштовно меблюємо та
+                обладнуємо робочі місця
               </p>
 
               <div className='box-shape'>
@@ -61,18 +63,21 @@ function Advantages() {
           <div className='col-lg-4 col-md-6 col-sm-6'>
             <div className='single-services-box'>
               <div className='icon'>
-                <i className='flaticon-room' />
+                {/* <i className='flaticon-university' /> */}
+                <svg width='65px' height='75px'>
+                  <use href={sprite + '#home-architecture-plan-icon'} />
+                </svg>
                 <div className='icon-bg'>
                   <img src='/images/icon-bg1.png' alt='advantage-icon' />
                   <img src='/images/icon-bg2.png' alt='advantage-icon' />
                 </div>
               </div>
               <h3>
-                <a href='/service-details/'>Инженерные коммуникации</a>
+                <a href='/service-details/'>Інженерні комунікації</a>
               </h3>
               <p>
-                Все необходимые коммуникации подключены и полностью готовы к
-                эксплуатации.
+                Всі офіси з гарним ремонтом, підключені до необхідних
+                комунікацій та повністю готові до експлуатації.
               </p>
 
               <div className='box-shape'>
@@ -84,19 +89,139 @@ function Advantages() {
           <div className='col-lg-4 col-md-6 col-sm-6'>
             <div className='single-services-box'>
               <div className='icon'>
-                <i className='flaticon-location' />
+                {/* <i className='flaticon-layers' /> */}
+                <svg width='65px' height='75px'>
+                  <use href={sprite + '#floor-plan-icon'} />
+                </svg>
                 <div className='icon-bg'>
                   <img src='/images/icon-bg1.png' alt='advantage-icon' />
                   <img src='/images/icon-bg2.png' alt='advantage-icon' />
                 </div>
               </div>
               <h3>
-                <a href='/service-details/'>Типовой план этажа</a>
+                <a href='/service-details/'>Планування поверхів</a>
               </h3>
               <p>
-                У нас вы сможете выбрать кабинетную систему или open space от
-                самого маленького офиса в 40м до помещения в 2000м на одном
-                этаже.
+                Доступні різні типи планувань: оупен-спейс, кабінетна система,
+                комбінована.
+              </p>
+              <div className='box-shape'>
+                <img src='/images/box-shape1.png' alt='advantage-icon' />
+                <img src='/images/box-shape2.png' alt='advantage-icon' />
+              </div>
+            </div>
+          </div>
+          <div className='col-lg-4 col-md-6 col-sm-6'>
+            <div className='single-services-box'>
+              <div className='icon'>
+                {/* <i className='flaticon-wifi' /> */}
+                <svg width='65px' height='75px'>
+                  <use href={sprite + '#smart-home-electricity-icon'} />
+                </svg>
+                <div className='icon-bg'>
+                  <img src='/images/icon-bg1.png' alt='advantage-icon' />
+                  <img src='/images/icon-bg2.png' alt='advantage-icon' />
+                </div>
+              </div>
+              <h3>
+                <a href='/service-details/'>Автономність</a>
+              </h3>
+              <p>
+                Завжди є електроенергія та інтернет, власні автономні джерела
+                живлення
+              </p>
+              <div className='box-shape'>
+                <img src='/images/box-shape1.png' alt='advantage-icon' />
+                <img src='/images/box-shape2.png' alt='advantage-icon' />
+              </div>
+            </div>
+          </div>
+          <div className='col-lg-4 col-md-6 col-sm-6'>
+            <div className='single-services-box'>
+              <div className='icon'>
+                <i className='flaticon-security' />
+                <div className='icon-bg'>
+                  <img src='/images/icon-bg1.png' alt='advantage-icon' />
+                  <img src='/images/icon-bg2.png' alt='advantage-icon' />
+                </div>
+              </div>
+              <h3>
+                <a href='/service-details/'>Безпека та комфорт</a>
+              </h3>
+              <p>Доступ 24/7, цілодобова охорона, клінінг</p>
+              <div className='box-shape'>
+                <img src='/images/box-shape1.png' alt='advantage-icon' />
+                <img src='/images/box-shape2.png' alt='advantage-icon' />
+              </div>
+            </div>
+          </div>
+          <div className='col-lg-4 col-md-6 col-sm-6'>
+            <div className='single-services-box'>
+              <div className='icon'>
+                <i className='flaticon-parking' />
+                <div className='icon-bg'>
+                  <img src='/images/icon-bg1.png' alt='advantage-icon' />
+                  <img src='/images/icon-bg2.png' alt='advantage-icon' />
+                </div>
+              </div>
+              <h3>
+                <a href='/service-details/'>Доступний паркінг</a>
+              </h3>
+              <p>
+                Дворівневий підземний паркінг на 300+ паркомісць прямо в БЦ,
+                близько 170 паркомісць на вулиці.
+              </p>
+              <div className='box-shape'>
+                <img src='/images/box-shape1.png' alt='advantage-icon' />
+                <img src='/images/box-shape2.png' alt='advantage-icon' />
+              </div>
+            </div>
+          </div>
+          <div className='col-lg-4 col-md-6 col-sm-6'>
+            <div className='single-services-box'>
+              <div className='icon'>
+                {/* <i className='flaticon-taxi' /> */}
+                <svg width='65px' height='75px'>
+                  <use href={sprite + '#tram-transport-icon'} />
+                </svg>
+
+                <div className='icon-bg'>
+                  <img src='/images/icon-bg1.png' alt='advantage-icon' />
+                  <img src='/images/icon-bg2.png' alt='advantage-icon' />
+                </div>
+              </div>
+              <h3>
+                <a href='/service-details/'>Транспортна розв'язка</a>
+              </h3>
+              <p>
+                3 станції метро та 30+ зупинок громадського транспорту до 5
+                хвилин пішки
+              </p>
+              <div className='box-shape'>
+                <img src='/images/box-shape1.png' alt='advantage-icon' />
+                <img src='/images/box-shape2.png' alt='advantage-icon' />
+              </div>
+            </div>
+          </div>
+          <div className='col-lg-4 col-md-6 col-sm-6'>
+            <div className='single-services-box'>
+              <div className='icon'>
+                {/* <i className='flaticon-parking' /> */}
+                <svg width='65px' height='75px'>
+                  <use href={sprite + '#announcement-icon'} />
+                </svg>
+
+                <div className='icon-bg'>
+                  <img src='/images/icon-bg1.png' alt='advantage-icon' />
+                  <img src='/images/icon-bg2.png' alt='advantage-icon' />
+                </div>
+              </div>
+              <h3>
+                <a href='/service-details/'>Укриття поблизу</a>
+              </h3>
+              <p>
+                Наявність 3 укриттів / бомбосховищ в доступності до 1 хвилини з
+                будь-якого місця в БЦ.
               </p>
               <div className='box-shape'>
                 <img src='/images/box-shape1.png' alt='advantage-icon' />
