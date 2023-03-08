@@ -15,6 +15,26 @@ const FooterWrap = styled.div`
       margin-right: 40px;
     }
   }
+  .footer-area {
+    background-color: #06487e;
+  }
+
+  .single-footer-widget h3::before {
+    background-color: white;
+  }
+
+  .single-footer-widget h3 {
+    border-bottom: 1px solid #b6b092;
+  }
+
+  .single-footer-widget .footer-contact-info li a:hover,
+  .copyright-area ul li a:hover {
+    color: #b6b092;
+  }
+
+  .copyright-area {
+    border-top: 1px solid #b6b092;
+  }
 `;
 
 export { FooterWrap };

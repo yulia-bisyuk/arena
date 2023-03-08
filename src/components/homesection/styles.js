@@ -10,6 +10,10 @@ export const HomeWrap = styled.div`
     background-image: url(${homeBanner});
   }
 
+  .home-section .banner-footer .banner-contact-info ul li i {
+    background-color: #b6b092;
+  }
+
   .banner-footer {
     z-index: 2;
   }
