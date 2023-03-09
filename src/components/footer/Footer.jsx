@@ -31,9 +31,9 @@ const Footer = () => {
                 width='100%'
                 height='380'
                 //   style='border:0;'
-                allowfullscreen=''
+                allowFullScreen=''
                 loading='lazy'
-                referrerpolicy='no-referrer-when-downgrade'
+                referrerPolicy='no-referrer-when-downgrade'
               ></iframe>
             </div>
           </div>
@@ -41,8 +41,7 @@ const Footer = () => {
             <div className='row align-items-center'>
               <div className='col-lg-6 col-sm-6 col-md-6'>
                 <p>
-                  <i className='far fa-copyright' /> Arena City{' '}
-                  {/*<a*/}
+                  <i className='far fa-copyright' /> Arena City {/*<a*/}
                   {/*  href='https://envytheme.com/'*/}
                   {/*  target='_blank'*/}
                   {/*  rel='noreferrer'*/}
