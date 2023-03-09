@@ -1,21 +1,10 @@
 import { useState } from 'react';
 import { PlansWrap } from './styles';
 import generalImg from './media/1.jpeg';
+import { floors } from '../data/floors';
 
 function OfficePlans() {
-  const [tabs, setTabs] = useState([
-    { id: 'tab1', active: false },
-    { id: 'tab2', active: false },
-    { id: 'tab3', active: false },
-    { id: 'tab4', active: false },
-    { id: 'tab5', active: false },
-    { id: 'tab6', active: false },
-  ]);
-
-  const onTabClick = (e) => {
-    setTabs((prevTabs) => [...prevTabs, { id: e.target.id, active: true }]);
-  };
-
+  const [activeTab, setActiveTab] = useState(0);
   return (
     <PlansWrap>
       <section className='floor-plans-area ptb-100'>
@@ -30,25 +19,13 @@ function OfficePlans() {
           <div className='row'>
             <div className='col-lg-12 col-md-12'>
               <div className='tab'>
-                <ul className='tabs' onClick={onTabClick}>
-                  <li id='tab1' className='current'>
-                    Про приміщення
-                  </li>
-                  <li id='tab2' className={tabs[1].active ? 'current' : ''}>
-                    Поверх 1
-                  </li>
-                  <li id='tab3' className={tabs[2].active ? 'current' : ''}>
-                    Поверх 2
-                  </li>
-                  <li id='tab4' className={tabs[3].active ? 'current' : ''}>
-                    Поверх 3
-                  </li>
-                  <li id='tab5' className={tabs[4].active ? 'current' : ''}>
-                    Поверх 4
-                  </li>
-                  <li id='tab6' className={tabs[5].active ? 'current' : ''}>
-                    Поверх 5
-                  </li>
+                <ul className='tabs'>
+                  {floors.map((floor, index) => (
+                    <li
+                      key={index}
+                      onClick={() => {setActiveTab(index)}}
+                      className={index === activeTab && 'current'}>{floor}</li>
+                  ))}
                 </ul>
                 <div className='tab_content'>
                   <div
