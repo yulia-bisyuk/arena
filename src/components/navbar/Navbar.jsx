@@ -1,15 +1,11 @@
 import React, { useState } from 'react';
 import { NavbarWrapper } from './styles';
-// eslint-disable-next-line
-import useOutside from '../../hoocks/useOutside';
-
+import useOutsideAlerter from '../../hooks/useOutsideAlerter';
 function Navbar() {
-  const [mobNavActive, setMobNavActive] = useState(false);
-  // const {ref, isShow, setIsShow} = useOutside(false);
-
+  const {refForOutside, isShowed, setIsShowed} = useOutsideAlerter(false);
   return (
     <NavbarWrapper>
-      <div id='navbar' className='navbar-area navbar-style-two'>
+      <div id='navbar' className='navbar-area navbar-style-two' ref={refForOutside}>
         <div className='tuam-nav'>
           <div className='container-fluid'>
             <nav className='navbar navbar-expand-md navbar-light'>
@@ -23,9 +19,9 @@ function Navbar() {
               </a>
               <button
                 className={`navbar-toggler navbar-toggler-right ${
-                  !mobNavActive ? 'collapsed' : ''
+                  !isShowed ? 'collapsed' : ''
                 }`}
-                onClick={() => setMobNavActive(!mobNavActive)}
+                onClick={() => setIsShowed(!isShowed)}
                 type='button'
                 data-toggle='collapse'
                 data-target='#navbarSupportedContent'
@@ -39,13 +35,13 @@ function Navbar() {
               </button>
               <div
                 className={`collapse navbar-collapse ${
-                  mobNavActive ? 'show' : ''
+                  isShowed ? 'show' : ''
                 }`}
                 id='navbarSupportedContent'
               >
                 <ul
                   className='navbar-nav'
-                  onClick={() => setMobNavActive(!mobNavActive)}
+                  onClick={() => setIsShowed(!isShowed)}
                 >
                   <li className='nav-item'>
                     <a className='nav-link' href='#advantages'>

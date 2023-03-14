@@ -24,6 +24,8 @@ function OfficePlans() {
         : (tab.className = 'tabs_item hidden');
     });
   }, [activeTab, tabsContent]);
+  
+  console.log(floors);
 
   return (
     <PlansWrap>
