@@ -10,17 +10,16 @@ const Footer = () => {
               <h3>Контакти</h3>
               <ul className='footer-contact-info'>
                 <li>
-                  <span>Адреса:</span> вул. Басейна 1-3/2 літ. "А”, Київ, 01001
+                  <span>Адреса:</span> <br />
+                  вул. Велика Васильківська / вул. Басейна, 1-3/2
                 </li>
 
                 <li>
-                  <span>Телефони:</span> <br />
-                  <a href='tel:+38 044 456-34-56'>+38 044 456-34-56</a> <br />
-                  <a href='tel:+38 044 678-34-56'>+38 044 678-34-56</a>
+                  <span>Телефон:</span> <br />
+                  <a href='tel:+38 097 080-30-22'>+38 097 080 30 22</a> <br />
                   <br />
-                  <span style={{ marginTop: '12px' }}>Відділ оренди:</span>{' '}
-                  <br />
-                  <a href='tel:+38 050 315-17-50'>+38 050 315-17-50</a>
+                  <span>Електронна скринька:</span> <br />
+                  <a href='mailto:info@arena-city.com'>info@arena-city.com</a>
                 </li>
               </ul>
             </div>

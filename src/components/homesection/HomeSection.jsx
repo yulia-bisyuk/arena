@@ -33,18 +33,21 @@ function HomeSection() {
                   <ul>
                     <li>
                       <i className='flaticon-location' />
-                      <span>Адреса офісу</span>вул. Басейна 1-3/2 літ. "А”,
-                      Київ, 01001
+                      <span>Адреса офісу</span>вул. Велика Васильківська / вул.
+                      Басейна, 1-3/2
                     </li>
                     <li>
                       <i className='flaticon-call' />
-                      <span>Наші телефони</span>
-                      <a href='tel:+38 044 456-34-56'>+38 044 456-34-56</a>
-                      <a href='tel:+38 044 678-34-56'>+38 044 678-34-56</a>
+                      <span>Контакти</span>
+                      <a href='tel:+38 097 080-30-22'>+38 097 080 30 22</a>
+                      <a href='mailto:info@arena-city.com'>
+                        info@arena-city.com
+                      </a>
                     </li>
                     <li>
                       <i className='flaticon-calendar' />
-                      <span>Ми працюємо</span>Без вихідних <br /> 07:00 - 20:00
+                      <span>Години роботи</span>
+                      Цілодобово
                     </li>
                   </ul>
                 </div>

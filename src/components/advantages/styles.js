@@ -1,11 +1,6 @@
 import styled from 'styled-components';
 
 export const AdvantagesWrap = styled.div`
-  .section-title h2,
-  .single-services-box h3 {
-    color: #6a6654;
-  }
-
   .single-services-box {
     height: 248px;
   }
@@ -47,7 +42,7 @@ export const AdvantagesWrap = styled.div`
   }
 
   .icon-additional {
-    fill: #b6b092;
+    fill: #524552;
   }
 
   @media (min-width: 768px) {
@@ -56,7 +51,7 @@ export const AdvantagesWrap = styled.div`
       height: 75px;
     }
   }
-  .single-services-box:hover .icon-additional {
+  /* .single-services-box:hover .icon-additional {
     fill: #06487e;
-  }
+  } */
 `;

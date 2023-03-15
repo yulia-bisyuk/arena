@@ -50,12 +50,12 @@ Default CSS
 $font-family: 'IBM Plex Sans', sans-serif;
 //$main-color: #ff5d22;
 $main-color: #06487e;
-//$black-color: #524552;
-$black-color: #b6b092;
+$black-color: #524552;
+// $black-color: #b6b092;
 $white-color: #ffffff;
-//$paragraph-color: #554955;
+$paragraph-color: #524552;
 // $paragraph-color: #b6b092;
-$paragraph-color: #6a6654;
+// $paragraph-color: #6a6654;
 $font-size: 16px;
 $transition: 0.5s;
 
@@ -1845,37 +1845,6 @@ Services Area CSS
       &:nth-child(2) {
         opacity: 0;
         visibility: hidden;
-      }
-    }
-  }
-  &:hover {
-    border-color: $black-color;
-    background-color: $black-color;
-
-    .icon {
-      color: $main-color;
-    }
-    h3 {
-      &::before {
-        background-color: $main-color;
-      }
-      a {
-        color: $white-color;
-      }
-    }
-    p {
-      color: $white-color;
-    }
-    .box-shape {
-      img {
-        &:nth-child(1) {
-          opacity: 0;
-          visibility: hidden;
-        }
-        &:nth-child(2) {
-          opacity: 1;
-          visibility: visible;
-        }
       }
     }
   }
