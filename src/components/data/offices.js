@@ -23,22 +23,26 @@ import floor14 from '../../images/availableOffices/floor-1/A-1-4.png';
 // import floor2168 from '../../images/availableOffices/floor-2/B-16-8.png';
 
 export const offices = [
-  // doesn't work this way
-  //   {
-  //     floor: 1,
-  //     src: [
-  //       '../../images/availableOffices/floor-1/A-1-1.png',
-  //       '../../images/availableOffices/floor-1/A-1-2.png',
-  //       '../../images/availableOffices/floor-1/A-1-3.png',
-  //       '../../images/availableOffices/floor-1/A-1-4.png',
-  //     ],
-  //   },
+  // new way
+    {
+      floor: 1,
+      src: [
+        '/images/availableOffices/floor-1/A-1-1.png',
+        '/images/availableOffices/floor-1/A-1-2.png',
+        '/images/availableOffices/floor-1/A-1-3.png',
+        '/images/availableOffices/floor-1/A-1-4.png',
+      ],
+    },
 
-  // works this way!
-  {
-    floor: 1,
-    src: [floor11, floor12, floor13, floor14],
-  },
+  // old way!
+  // {
+  //   floor: 1,
+  //   src: [floor11, floor12, floor13, floor14],
+  // },
+  
+  
+  
+  
   //   {
   //     floor: 2,
   //     src: [
