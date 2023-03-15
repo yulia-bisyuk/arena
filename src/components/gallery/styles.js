@@ -8,8 +8,4 @@ export const GalleryWrapper = styled.section`
       height: 100%;
     }
   }
-
-  .section-title h2 {
-    color: #6a6654;
-  }
 `;

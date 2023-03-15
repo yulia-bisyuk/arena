@@ -1,11 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { NavbarWrapper } from './styles';
 import useOutsideAlerter from '../../hooks/useOutsideAlerter';
 function Navbar() {
-  const {refForOutside, isShowed, setIsShowed} = useOutsideAlerter(false);
+  const { refForOutside, isShowed, setIsShowed } = useOutsideAlerter(false);
   return (
     <NavbarWrapper>
-      <div id='navbar' className='navbar-area navbar-style-two' ref={refForOutside}>
+      <div
+        id='navbar'
+        className='navbar-area navbar-style-two'
+        ref={refForOutside}
+      >
         <div className='tuam-nav'>
           <div className='container-fluid'>
             <nav className='navbar navbar-expand-md navbar-light'>
@@ -34,9 +38,7 @@ function Navbar() {
                 <span className='icon-bar bottom-bar' />
               </button>
               <div
-                className={`collapse navbar-collapse ${
-                  isShowed ? 'show' : ''
-                }`}
+                className={`collapse navbar-collapse ${isShowed ? 'show' : ''}`}
                 id='navbarSupportedContent'
               >
                 <ul
@@ -64,7 +66,10 @@ function Navbar() {
                     <div className='icon'>
                       <i className='flaticon-call' />
                     </div>
-                    Звязатися:<span className='number'>+38 044 456-34-56</span>
+                    Звя'затися:
+                    <span className='number'>
+                      <a href='tel:+38 097 080-30-22'>+38 097 080 30 22</a>
+                    </span>
                   </div>
                   <a className='default-btn' href='/index2/#'>
                     Англійська
