@@ -1099,31 +1099,7 @@ Main Banner Area CSS
     opacity: 0.6;
   }
 }
-.item-bg1 {
-  background: {
-    image: url(../images/main-banner1.jpg);
-  }
-}
-.item-bg2 {
-  background: {
-    image: url(../images/main-banner2.jpg);
-  }
-}
-.item-bg3 {
-  background: {
-    image: url(../images/main-banner3.jpg);
-  }
-}
-.item-bg4 {
-  background: {
-    image: url(../images/main-banner4.jpg);
-  }
-}
-.item-bg5 {
-  background: {
-    image: url(../images/main-banner5.jpg);
-  }
-}
+//
 .banner-section {
   height: 100vh;
   position: relative;
@@ -2384,12 +2360,6 @@ Why Choose Us Area CSS
   z-index: 2;
   width: 100%;
   height: 100%;
-  background: {
-    image: url(../images/why-choose-img1.jpg);
-    position: center center;
-    size: cover;
-    repeat: no-repeat;
-  }
   img {
     display: none;
   }
@@ -2570,137 +2540,108 @@ Pricing Area CSS
       size: cover;
       repeat: no-repeat;
     }
-    &.bg1 {
-      background: {
-        image: url(../images/place-img1.jpg);
-      }
-    }
-    &.bg2 {
-      background: {
-        image: url(../images/place-img2.jpg);
-      }
-    }
-    &.bg3 {
-      background: {
-        image: url(../images/place-img3.jpg);
-      }
-    }
-    &::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      z-index: -1;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      border-radius: 5px;
-      background-color: $black-color;
-      opacity: 0.75;
-    }
-    h3 {
-      margin-bottom: 0;
-      color: $white-color;
-      position: relative;
-      z-index: 1;
-      font: {
-        weight: 600;
-        size: 24px;
-      }
-    }
-    &::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      height: 130px;
-      width: 100%;
-      background: {
-        image: url(../images/pricing-shape.png);
-        position: center center;
-        size: cover;
-        repeat: no-repeat;
-      }
-    }
   }
-  .price {
-    color: $black-color;
-    margin-top: 20px;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background-color: $black-color;
+    opacity: 0.75;
+  }
+  h3 {
+    margin-bottom: 0;
+    color: $white-color;
+    position: relative;
+    z-index: 1;
     font: {
-      size: 40px;
-      weight: 700;
-    }
-    sub {
-      text-transform: uppercase;
-      bottom: 2px;
-      margin: 0 5px 0 5px;
-      font: {
-        weight: 300;
-        size: 18px;
-      }
+      weight: 600;
+      size: 24px;
     }
   }
-  .book-now-btn {
-    margin-top: 20px;
+}
+.price {
+  color: $black-color;
+  margin-top: 20px;
+  font: {
+    size: 40px;
+    weight: 700;
+  }
+  sub {
+    text-transform: uppercase;
+    bottom: 2px;
+    margin: 0 5px 0 5px;
+    font: {
+      weight: 300;
+      size: 18px;
+    }
+  }
+}
+.book-now-btn {
+  margin-top: 20px;
 
-    .default-btn {
-      background-color: transparent;
-      color: $main-color;
-      border: 1px solid $main-color;
-      padding: {
-        left: 35px;
-        right: 35px;
-        top: 12px;
-        bottom: 12px;
-      }
-      span {
-        background-color: $main-color;
-      }
-      &:hover {
-        color: $white-color;
-      }
-    }
-  }
-  .pricing-features-list {
-    margin: {
-      bottom: 0;
-      top: 25px;
-    }
-    list-style-type: none;
-    text-align: left;
+  .default-btn {
+    background-color: transparent;
+    color: $main-color;
+    border: 1px solid $main-color;
     padding: {
-      left: 40px;
-      right: 40px;
+      left: 35px;
+      right: 35px;
+      top: 12px;
+      bottom: 12px;
     }
-    li {
-      color: $black-color;
-      margin-bottom: 12px;
-      position: relative;
-      padding-left: 25px;
+    span {
+      background-color: $main-color;
+    }
+    &:hover {
+      color: $white-color;
+    }
+  }
+}
+.pricing-features-list {
+  margin: {
+    bottom: 0;
+    top: 25px;
+  }
+  list-style-type: none;
+  text-align: left;
+  padding: {
+    left: 40px;
+    right: 40px;
+  }
+  li {
+    color: $black-color;
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 25px;
 
-      font: {
-        size: $font-size;
-        weight: 300;
+    font: {
+      size: $font-size;
+      weight: 300;
+    }
+    i {
+      color: $main-color;
+      position: absolute;
+      left: 0;
+      top: 0;
+
+      &.flaticon-cross-out {
+        font-size: 14px;
       }
+    }
+    &.none-active {
+      opacity: 0.76;
+
       i {
-        color: $main-color;
-        position: absolute;
-        left: 0;
-        top: 0;
-
-        &.flaticon-cross-out {
-          font-size: 14px;
-        }
+        color: $black-color;
       }
-      &.none-active {
-        opacity: 0.76;
-
-        i {
-          color: $black-color;
-        }
-      }
-      &:last-child {
-        margin-bottom: 0;
-      }
+    }
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 }
@@ -2708,28 +2649,7 @@ Pricing Area CSS
 /*================================================
 Join Area CSS
 =================================================*/
-.join-area {
-  position: relative;
-  z-index: 1;
-  background: {
-    image: url(../images/join-bg.jpg);
-    position: center center;
-    size: cover;
-    repeat: no-repeat;
-    attachment: fixed;
-  }
-  &::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    background-color: $black-color;
-    opacity: 0.75;
-  }
-}
+
 .join-content {
   text-align: center;
   max-width: 650px;
@@ -2879,16 +2799,7 @@ Our Mission Area CSS
     size: cover;
     repeat: no-repeat;
   }
-  &.bg-1 {
-    background: {
-      image: url(../images/mission-img1.jpg);
-    }
-  }
-  &.bg-2 {
-    background: {
-      image: url(../images/mission-img2.jpg);
-    }
-  }
+
   img {
     display: none;
   }
@@ -3076,26 +2987,6 @@ Event Area CSS
       }
       img {
         display: none;
-      }
-      &.bg1 {
-        background: {
-          image: url(../images/event/event1.jpg);
-        }
-      }
-      &.bg2 {
-        background: {
-          image: url(../images/event/event2.jpg);
-        }
-      }
-      &.bg3 {
-        background: {
-          image: url(../images/event/event3.jpg);
-        }
-      }
-      &.bg4 {
-        background: {
-          image: url(../images/event/event4.jpg);
-        }
       }
     }
   }
@@ -3349,21 +3240,7 @@ Place Area CSS
     size: cover;
     repeat: no-repeat;
   }
-  &.bg1 {
-    background: {
-      image: url(../images/place-img1.jpg);
-    }
-  }
-  &.bg2 {
-    background: {
-      image: url(../images/place-img2.jpg);
-    }
-  }
-  &.bg3 {
-    background: {
-      image: url(../images/place-img3.jpg);
-    }
-  }
+
   img {
     width: auto !important;
     display: none !important;
@@ -4421,15 +4298,15 @@ Sidebar Widget Area CSS
             repeat: no-repeat;
             position: center center !important;
           }
-          &.bg1 {
-            background-image: url(../images/blog/blog7.jpg);
-          }
-          &.bg2 {
-            background-image: url(../images/blog/blog8.jpg);
-          }
-          &.bg3 {
-            background-image: url(../images/blog/blog9.jpg);
-          }
+          // &.bg1 {
+          //   background-image: url(../images/blog/blog7.jpg);
+          // }
+          // &.bg2 {
+          //   background-image: url(../images/blog/blog8.jpg);
+          // }
+          // &.bg3 {
+          //   background-image: url(../images/blog/blog9.jpg);
+          // }
         }
       }
       .info {

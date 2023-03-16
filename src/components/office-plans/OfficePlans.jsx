@@ -1,9 +1,10 @@
+import React from 'react';
 import { useState, useEffect } from 'react';
 import PlansCarousel from './PlansCarousel';
 import { PlansWrap } from './styles';
 import generalImg from './media/1.jpeg';
-import { floors } from '../data/floors';
-import { offices } from '../data/offices';
+import { floors } from '../../data/floors';
+import { offices } from '../../data/offices';
 import floor1 from './media/floor-1.png';
 import floor2 from './media/floor-2.png';
 import floor3 from './media/floor-3.png';
@@ -26,8 +27,6 @@ function OfficePlans() {
         : (tab.className = 'tabs_item hidden');
     });
   }, [activeTab, tabsContent]);
-
-  console.log(offices[0].src);
 
   return (
     <PlansWrap>
@@ -71,20 +70,20 @@ function OfficePlans() {
                             повністю готові до експлуатації.
                           </p>
                           <ul className='features-list'>
-                            <li className>
+                            <li>
                               Загальна площа <span>14 165,6 м2</span>
                             </li>
-                            <li className>
+                            <li>
                               Поверхи <span>1-5</span>
                             </li>
-                            <li className>
+                            <li>
                               Ліфти <span>9</span>
                             </li>
 
-                            <li className>
+                            <li>
                               Найменший офіс <span>35 м2</span>
                             </li>
-                            <li className>
+                            <li>
                               Найбільший офіс <span>2500 м2</span>
                             </li>
                           </ul>
@@ -100,7 +99,11 @@ function OfficePlans() {
                       </div>
                       <div className='col-lg-6 col-md-12 image'>
                         <div className='tabs_item_image'>
-                          <img src={generalImg} alt='floor-img' />
+                          <img
+                            src={generalImg}
+                            alt='floor-img'
+                            className='first'
+                          />
                         </div>
                       </div>
                     </div>
@@ -119,7 +122,7 @@ function OfficePlans() {
                             Виберіть найбільш привабливий та комфортний для Вас
                             офіс зі всіх доступних для оренди в нашому БЦ.
                           </p>
-                          <PlansCarousel images={offices[0].src} />
+                          <PlansCarousel images={offices[0].images} />
 
                           <a
                             className='default-btn'
@@ -147,7 +150,7 @@ function OfficePlans() {
                             Виберіть найбільш привабливий та комфортний для Вас
                             офіс зі всіх доступних для оренди в нашому БЦ.
                           </p>
-                          {/* <PlansCarousel images={offices[1].src} /> */}
+                          <PlansCarousel images={offices[1].images} />
                           <a
                             className='default-btn'
                             href='/files/arena-city.pdf'
@@ -174,23 +177,7 @@ function OfficePlans() {
                             Виберіть найбільш привабливий та комфортний для Вас
                             офіс зі всіх доступних для оренди в нашому БЦ.
                           </p>
-                          <ul className='features-list'>
-                            <li className=''>
-                              Floor No <span>2</span>
-                            </li>
-                            <li className=''>
-                              Rooms <span>4</span>
-                            </li>
-                            <li className=''>
-                              Total Area <span>311.50 sqft</span>
-                            </li>
-                            <li className=''>
-                              Bathroom <span>Yes</span>
-                            </li>
-                            <li className=''>
-                              Windows <span>4</span>
-                            </li>
-                          </ul>
+                          <PlansCarousel images={offices[2].images} />
                           <a
                             className='default-btn'
                             href='/files/arena-city.pdf'
@@ -217,23 +204,7 @@ function OfficePlans() {
                             Виберіть найбільш привабливий та комфортний для Вас
                             офіс зі всіх доступних для оренди в нашому БЦ.
                           </p>
-                          <ul className='features-list'>
-                            <li className=''>
-                              Floor No <span>2</span>
-                            </li>
-                            <li className=''>
-                              Rooms <span>4</span>
-                            </li>
-                            <li className=''>
-                              Total Area <span>311.50 sqft</span>
-                            </li>
-                            <li className=''>
-                              Bathroom <span>Yes</span>
-                            </li>
-                            <li className=''>
-                              Windows <span>4</span>
-                            </li>
-                          </ul>
+                          <PlansCarousel images={offices[3].images} />
                           <a
                             className='default-btn'
                             href='/files/arena-city.pdf'
@@ -260,23 +231,7 @@ function OfficePlans() {
                             Виберіть найбільш привабливий та комфортний для Вас
                             офіс зі всіх доступних для оренди в нашому БЦ.
                           </p>
-                          <ul className='features-list'>
-                            <li className=''>
-                              Floor No <span>2</span>
-                            </li>
-                            <li className=''>
-                              Rooms <span>4</span>
-                            </li>
-                            <li className=''>
-                              Total Area <span>311.50 sqft</span>
-                            </li>
-                            <li className=''>
-                              Bathroom <span>Yes</span>
-                            </li>
-                            <li className=''>
-                              Windows <span>4</span>
-                            </li>
-                          </ul>
+                          <PlansCarousel images={offices[4].images} />
                           <a
                             className='default-btn'
                             href='/files/arena-city.pdf'

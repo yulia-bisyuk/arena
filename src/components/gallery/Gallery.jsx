@@ -1,6 +1,5 @@
 import React from 'react';
 import { GalleryWrapper } from './styles';
-import foto5 from '../../images/gallery/5.jpg';
 
 function Gallery() {
   return (
@@ -31,7 +30,7 @@ function Gallery() {
                 <img src='/images/gallery/3.jpg' alt='business-center' />
               </div>
               <div className='single-gallery-box'>
-                <img src={foto5} alt='business-center' />
+                <img src='/images/gallery/5-2.jpg' alt='business-center' />
               </div>
               <div className='single-gallery-box'>
                 <img src='/images/gallery/6.jpg' alt='business-center' />
