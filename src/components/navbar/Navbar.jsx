@@ -21,6 +21,17 @@ function Navbar() {
                 />
                 <img src='/images/logo.png' alt='logo' className='logo' />
               </a>
+              <div className='call-us-top'>
+                <div className='call-us-top-icon-text-wrap'>
+                  <div className='icon'>
+                    <i className='flaticon-call' />
+                  </div>
+                  <span className='text'>Звя'затися:</span>
+                </div>
+                <span className='number'>
+                  <a href='tel:+38 097 080-30-22'>+38 097 080 30 22</a>
+                </span>
+              </div>
               <button
                 className={`navbar-toggler navbar-toggler-right ${
                   !isShowed ? 'collapsed' : ''
@@ -62,7 +73,7 @@ function Navbar() {
                   </li>
                 </ul>
                 <div className='others-option'>
-                  <div className='call-us'>
+                  {/* <div className='call-us'>
                     <div className='icon'>
                       <i className='flaticon-call' />
                     </div>
@@ -70,9 +81,17 @@ function Navbar() {
                     <span className='number'>
                       <a href='tel:+38 097 080-30-22'>+38 097 080 30 22</a>
                     </span>
-                  </div>
+                  </div> */}
+                  <a
+                    className='default-btn nav-presentation-btn'
+                    href='/files/arena-city.pdf'
+                    download
+                    target='_blank'
+                  >
+                    Завантажити презентацію <span />
+                  </a>
                   <a className='default-btn' href='/index2/#'>
-                    Англійська
+                    EN
                     <span />
                   </a>
                 </div>

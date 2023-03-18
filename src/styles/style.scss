@@ -962,6 +962,7 @@ Navbar Area CSS
         .others-option {
           display: flex;
           align-items: center;
+          justify-content: space-between;
 
           .call-us {
             display: inline-block;
@@ -1345,15 +1346,15 @@ Main Banner Area CSS
       ul {
         padding-left: 0;
         list-style-type: none;
-        max-width: 770px;
+        // max-width: 770px;
         display: -ms-flexbox;
         display: flex;
         -ms-flex-wrap: wrap;
         flex-wrap: wrap;
         margin: {
           bottom: 0;
-          right: -15px;
-          left: -15px;
+          // right: -15px;
+          // left: -15px;
         }
         li {
           position: relative;
@@ -1397,12 +1398,12 @@ Main Banner Area CSS
           &:last-child {
             margin-right: 0;
           }
-          &:hover {
-            i {
-              background-color: $white-color;
-              color: $main-color;
-            }
-          }
+          // &:hover {
+          //   i {
+          //     background-color: $white-color;
+          //     color: $main-color;
+          //   }
+          // }
         }
       }
     }
