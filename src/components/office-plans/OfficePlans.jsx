@@ -1,23 +1,19 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
+import useMediaQuery from '../../hooks/useMediaQuery';
 import PlansCarousel from './PlansCarousel';
 import { PlansWrap } from './styles';
-import generalImg from './media/1.jpeg';
-import { floors } from '../../data/floors';
-import { offices } from '../../data/offices';
-import floor1 from './media/floor-1.png';
-import floor2 from './media/floor-2.png';
-import floor3 from './media/floor-3.png';
-import floor4 from './media/floor-4.png';
-import floor5 from './media/floor-5.png';
+import { floors, floorsContentData } from '../../data/floors';
+// import { offices } from '../../data/offices';
 
 function OfficePlans() {
   const [activeTab, setActiveTab] = useState(0);
   const [tabsContent, setTabsContent] = useState([]);
+  const isMobile = useMediaQuery('(max-width: 991px)');
 
   useEffect(() => {
     setTabsContent(Array.from(document.querySelectorAll('#tab')));
-  }, []);
+  }, [isMobile]);
 
   useEffect(() => {
     // eslint-disable-next-line
@@ -100,7 +96,7 @@ function OfficePlans() {
                       <div className='col-lg-6 col-md-12 image'>
                         <div className='tabs_item_image'>
                           <img
-                            src={generalImg}
+                            src='./images/floorPlans/1.jpeg'
                             alt='floor-img'
                             className='first'
                           />
@@ -108,11 +104,126 @@ function OfficePlans() {
                       </div>
                     </div>
                   </div>
-                  <div id='tab' className='tabs_item'>
+                  {/* floors */}
+                  {floorsContentData.map((floor, index) => {
+                    return isMobile ? (
+                      // mobile
+                      <div id='tab' className='tabs_item' key={index}>
+                        <div className='row align-items-center'>
+                          <div className='col-lg-6 col-md-12 content'>
+                            <div className='tabs_item_content'>
+                              <h3>{floor.name}</h3>
+                              <p>
+                                Виберіть найбільш привабливий та комфортний для
+                                Вас офіс зі всіх доступних для оренди в нашому
+                                БЦ.
+                              </p>
+                              <div className='col-lg-6 col-md-12 image'>
+                                <div className='tabs_item_image'>
+                                  <img
+                                    src={floor.floorPlan}
+                                    alt='floor-plan'
+                                    style={{ marginBottom: '20px' }}
+                                  />
+                                </div>
+                              </div>
+                              <PlansCarousel images={floor.floorImages} />
+                              <a
+                                className='default-btn'
+                                href='/files/arena-city.pdf'
+                                download
+                                target='_blank'
+                              >
+                                Завантажити презентацію <span />
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    ) : (
+                      // desktop
+                      <div id='tab' className='tabs_item' key={index}>
+                        <div className='row align-items-center'>
+                          <div className='col-lg-6 col-md-12 image'>
+                            <div className='tabs_item_image'>
+                              <img
+                                src={floor.floorPlan}
+                                alt='floor-plan'
+                                // key={index}
+                              />
+                            </div>
+                          </div>
+                          <div className='col-lg-6 col-md-12 content'>
+                            <div className='tabs_item_content'>
+                              <h3>{floor.name}</h3>
+                              <p>
+                                Виберіть найбільш привабливий та комфортний для
+                                Вас офіс зі всіх доступних для оренди в нашому
+                                БЦ.
+                              </p>
+
+                              <PlansCarousel
+                                images={floor.floorImages}
+                                key={index}
+                              />
+
+                              <a
+                                className='default-btn'
+                                href='/files/arena-city.pdf'
+                                download
+                                target='_blank'
+                              >
+                                Завантажити презентацію <span />
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })}
+
+                  {/* поверх 1 mob */}
+                  {/* <div id='tab' className='tabs_item'>
+                    <div className='row align-items-center'>
+                      <div className='col-lg-6 col-md-12 content'>
+                        <div className='tabs_item_content'>
+                          <h3>Поверх 1</h3>
+                          <p>
+                            Виберіть найбільш привабливий та комфортний для Вас
+                            офіс зі всіх доступних для оренди в нашому БЦ.
+                          </p>
+                          <div className='col-lg-6 col-md-12 image'>
+                            <div className='tabs_item_image'>
+                              <img
+                                src='./images/floorPlans/floor-1.png'
+                                alt='floor-plan'
+                              />
+                            </div>
+                          </div>
+                          <PlansCarousel images={offices[0].images} />
+
+                          <a
+                            className='default-btn'
+                            href='/files/arena-city.pdf'
+                            download
+                            target='_blank'
+                          >
+                            Завантажити презентацію <span />
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div> */}
+
+                  {/* поверхи */}
+                  {/* <div id='tab' className='tabs_item'>
                     <div className='row align-items-center'>
                       <div className='col-lg-6 col-md-12 image'>
                         <div className='tabs_item_image'>
-                          <img src={floor1} alt='floor-plan' />
+                          <img
+                            src='./images/floorPlans/floor-1.png'
+                            alt='floor-plan'
+                          />
                         </div>
                       </div>
                       <div className='col-lg-6 col-md-12 content'>
@@ -140,7 +251,10 @@ function OfficePlans() {
                     <div className='row align-items-center'>
                       <div className='col-lg-6 col-md-12 image'>
                         <div className='tabs_item_image'>
-                          <img src={floor2} alt='floor-plan' />
+                          <img
+                            src='./images/floorPlans/floor-2.png'
+                            alt='floor-plan'
+                          />
                         </div>
                       </div>
                       <div className='col-lg-6 col-md-12 content'>
@@ -167,7 +281,10 @@ function OfficePlans() {
                     <div className='row align-items-center'>
                       <div className='col-lg-6 col-md-12 image'>
                         <div className='tabs_item_image'>
-                          <img src={floor3} alt='floor-plan' />
+                          <img
+                            src='./images/floorPlans/floor-3.png'
+                            alt='floor-plan'
+                          />
                         </div>
                       </div>
                       <div className='col-lg-6 col-md-12 content'>
@@ -194,7 +311,10 @@ function OfficePlans() {
                     <div className='row align-items-center'>
                       <div className='col-lg-6 col-md-12 image'>
                         <div className='tabs_item_image'>
-                          <img src={floor4} alt='floor-plan' />
+                          <img
+                            src='./images/floorPlans/floor-4.png'
+                            alt='floor-plan'
+                          />
                         </div>
                       </div>
                       <div className='col-lg-6 col-md-12 content'>
@@ -221,7 +341,10 @@ function OfficePlans() {
                     <div className='row align-items-center'>
                       <div className='col-lg-6 col-md-12 image'>
                         <div className='tabs_item_image'>
-                          <img src={floor5} alt='floor-plan' />
+                          <img
+                            src='./images/floorPlans/floor-5.png'
+                            alt='floor-plan'
+                          />
                         </div>
                       </div>
                       <div className='col-lg-6 col-md-12 content'>
@@ -243,7 +366,7 @@ function OfficePlans() {
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>

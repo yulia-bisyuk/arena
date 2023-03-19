@@ -188,7 +188,7 @@ function Advantages() {
               </div>
             </div>
             <div className='col-lg-4 col-md-6 col-sm-6'>
-              <div className='single-services-box'>
+              <div className='single-services-box last'>
                 <div className='icon'>
                   <svg width='40px' height='46px' className='icon-additional'>
                     <use href={sprite + '#announcement-icon'} />

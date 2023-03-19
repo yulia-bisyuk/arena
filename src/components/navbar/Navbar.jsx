@@ -32,6 +32,10 @@ function Navbar() {
                   <a href='tel:+38 097 080-30-22'>+38 097 080 30 22</a>
                 </span>
               </div>
+              <a className='default-btn small-scr' href='/index2/#'>
+                EN
+                <span />
+              </a>
               <button
                 className={`navbar-toggler navbar-toggler-right ${
                   !isShowed ? 'collapsed' : ''
@@ -73,15 +77,6 @@ function Navbar() {
                   </li>
                 </ul>
                 <div className='others-option'>
-                  {/* <div className='call-us'>
-                    <div className='icon'>
-                      <i className='flaticon-call' />
-                    </div>
-                    Звя'затися:
-                    <span className='number'>
-                      <a href='tel:+38 097 080-30-22'>+38 097 080 30 22</a>
-                    </span>
-                  </div> */}
                   <a
                     className='default-btn nav-presentation-btn'
                     href='/files/arena-city.pdf'
@@ -90,12 +85,16 @@ function Navbar() {
                   >
                     Завантажити презентацію <span />
                   </a>
-                  <a className='default-btn' href='/index2/#'>
+                  {/* <a className='default-btn' href='/index2/#'>
                     EN
                     <span />
-                  </a>
+                  </a> */}
                 </div>
               </div>
+              <a className='default-btn large-scr' href='/index2/#'>
+                EN
+                <span />
+              </a>
             </nav>
           </div>
         </div>

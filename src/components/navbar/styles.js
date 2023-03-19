@@ -53,6 +53,11 @@ export const NavbarWrapper = styled.nav`
     /* transform: translateY(-50%); */
   }
 
+  nav a.default-btn {
+    background-color: #000;
+    padding: 10px 15px;
+  }
+
   .navbar-area.navbar-style-two .tuam-nav .navbar .others-option .default-btn {
     margin-left: 0;
   }
@@ -66,6 +71,16 @@ export const NavbarWrapper = styled.nav`
     }
   }
 
+  @media (max-width: 767px) {
+    .large-scr {
+      display: none;
+    }
+
+    .tuam-nav .navbar .navbar-nav {
+      margin-top: 10px;
+    }
+  }
+
   @media (min-width: 768px) {
     .number a {
       color: white;
@@ -74,6 +89,9 @@ export const NavbarWrapper = styled.nav`
       display: none;
     }
     .call-us-top {
+      display: none;
+    }
+    .small-scr {
       display: none;
     }
   }
