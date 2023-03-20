@@ -2,8 +2,6 @@ import React from 'react';
 import sprite from '../../icons/sprite.svg';
 import { AdvantagesWrap } from './styles';
 
-// import { ReactComponent as ArrowIcon } from '../../assets/icons/icons-expand-more.svg';
-
 function Advantages() {
   return (
     <AdvantagesWrap>

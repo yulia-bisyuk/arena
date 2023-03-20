@@ -85,10 +85,6 @@ function Navbar() {
                   >
                     Завантажити презентацію <span />
                   </a>
-                  {/* <a className='default-btn' href='/index2/#'>
-                    EN
-                    <span />
-                  </a> */}
                 </div>
               </div>
               <a className='default-btn large-scr' href='/index2/#'>

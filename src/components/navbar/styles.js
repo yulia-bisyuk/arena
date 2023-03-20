@@ -46,11 +46,7 @@ export const NavbarWrapper = styled.nav`
     font-size: 20px;
     background-color: #f1f4f4;
     text-align: center;
-    /* position: absolute; */
-    /* left: 0; */
-    /* top: 50%; */
     transition: 0.5s;
-    /* transform: translateY(-50%); */
   }
 
   nav a.default-btn {

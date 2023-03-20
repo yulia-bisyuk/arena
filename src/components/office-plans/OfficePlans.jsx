@@ -3,8 +3,7 @@ import { useState, useEffect } from 'react';
 import useMediaQuery from '../../hooks/useMediaQuery';
 import PlansCarousel from './PlansCarousel';
 import { PlansWrap } from './styles';
-import { floors, floorsContentData } from '../../data/floors';
-// import { offices } from '../../data/offices';
+import { tabs, floors } from '../../data/floors';
 
 function OfficePlans() {
   const [activeTab, setActiveTab] = useState(0);
@@ -40,7 +39,7 @@ function OfficePlans() {
             <div className='col-lg-12 col-md-12'>
               <div className='tab'>
                 <ul className='tabs'>
-                  {floors.map((floor, index) => (
+                  {tabs.map((tab, index) => (
                     <li
                       key={index}
                       onClick={() => {
@@ -48,7 +47,7 @@ function OfficePlans() {
                       }}
                       className={index === activeTab && 'current'}
                     >
-                      {floor}
+                      {tab}
                     </li>
                   ))}
                 </ul>
@@ -104,8 +103,8 @@ function OfficePlans() {
                       </div>
                     </div>
                   </div>
-                  {/* floors */}
-                  {floorsContentData.map((floor, index) => {
+
+                  {floors.map((floor, index) => {
                     return isMobile ? (
                       // mobile
                       <div id='tab' className='tabs_item' key={index}>
@@ -121,13 +120,13 @@ function OfficePlans() {
                               <div className='col-lg-6 col-md-12 image'>
                                 <div className='tabs_item_image'>
                                   <img
-                                    src={floor.floorPlan}
+                                    src={floor.plan}
                                     alt='floor-plan'
                                     style={{ marginBottom: '20px' }}
                                   />
                                 </div>
                               </div>
-                              <PlansCarousel images={floor.floorImages} />
+                              <PlansCarousel images={floor.images} />
                               <a
                                 className='default-btn'
                                 href='/files/arena-city.pdf'
@@ -146,11 +145,7 @@ function OfficePlans() {
                         <div className='row align-items-center'>
                           <div className='col-lg-6 col-md-12 image'>
                             <div className='tabs_item_image'>
-                              <img
-                                src={floor.floorPlan}
-                                alt='floor-plan'
-                                // key={index}
-                              />
+                              <img src={floor.plan} alt='floor-plan' />
                             </div>
                           </div>
                           <div className='col-lg-6 col-md-12 content'>
@@ -163,7 +158,7 @@ function OfficePlans() {
                               </p>
 
                               <PlansCarousel
-                                images={floor.floorImages}
+                                images={floor.images}
                                 key={index}
                               />
 
@@ -181,192 +176,6 @@ function OfficePlans() {
                       </div>
                     );
                   })}
-
-                  {/* поверх 1 mob */}
-                  {/* <div id='tab' className='tabs_item'>
-                    <div className='row align-items-center'>
-                      <div className='col-lg-6 col-md-12 content'>
-                        <div className='tabs_item_content'>
-                          <h3>Поверх 1</h3>
-                          <p>
-                            Виберіть найбільш привабливий та комфортний для Вас
-                            офіс зі всіх доступних для оренди в нашому БЦ.
-                          </p>
-                          <div className='col-lg-6 col-md-12 image'>
-                            <div className='tabs_item_image'>
-                              <img
-                                src='./images/floorPlans/floor-1.png'
-                                alt='floor-plan'
-                              />
-                            </div>
-                          </div>
-                          <PlansCarousel images={offices[0].images} />
-
-                          <a
-                            className='default-btn'
-                            href='/files/arena-city.pdf'
-                            download
-                            target='_blank'
-                          >
-                            Завантажити презентацію <span />
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div> */}
-
-                  {/* поверхи */}
-                  {/* <div id='tab' className='tabs_item'>
-                    <div className='row align-items-center'>
-                      <div className='col-lg-6 col-md-12 image'>
-                        <div className='tabs_item_image'>
-                          <img
-                            src='./images/floorPlans/floor-1.png'
-                            alt='floor-plan'
-                          />
-                        </div>
-                      </div>
-                      <div className='col-lg-6 col-md-12 content'>
-                        <div className='tabs_item_content'>
-                          <h3>Поверх 1</h3>
-                          <p>
-                            Виберіть найбільш привабливий та комфортний для Вас
-                            офіс зі всіх доступних для оренди в нашому БЦ.
-                          </p>
-                          <PlansCarousel images={offices[0].images} />
-
-                          <a
-                            className='default-btn'
-                            href='/files/arena-city.pdf'
-                            download
-                            target='_blank'
-                          >
-                            Завантажити презентацію <span />
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div id='tab' className='tabs_item'>
-                    <div className='row align-items-center'>
-                      <div className='col-lg-6 col-md-12 image'>
-                        <div className='tabs_item_image'>
-                          <img
-                            src='./images/floorPlans/floor-2.png'
-                            alt='floor-plan'
-                          />
-                        </div>
-                      </div>
-                      <div className='col-lg-6 col-md-12 content'>
-                        <div className='tabs_item_content'>
-                          <h3>Поверх 2</h3>
-                          <p>
-                            Виберіть найбільш привабливий та комфортний для Вас
-                            офіс зі всіх доступних для оренди в нашому БЦ.
-                          </p>
-                          <PlansCarousel images={offices[1].images} />
-                          <a
-                            className='default-btn'
-                            href='/files/arena-city.pdf'
-                            download
-                            target='_blank'
-                          >
-                            Завантажити презентацію <span />
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div id='tab' className='tabs_item'>
-                    <div className='row align-items-center'>
-                      <div className='col-lg-6 col-md-12 image'>
-                        <div className='tabs_item_image'>
-                          <img
-                            src='./images/floorPlans/floor-3.png'
-                            alt='floor-plan'
-                          />
-                        </div>
-                      </div>
-                      <div className='col-lg-6 col-md-12 content'>
-                        <div className='tabs_item_content'>
-                          <h3>Поверх 3</h3>
-                          <p>
-                            Виберіть найбільш привабливий та комфортний для Вас
-                            офіс зі всіх доступних для оренди в нашому БЦ.
-                          </p>
-                          <PlansCarousel images={offices[2].images} />
-                          <a
-                            className='default-btn'
-                            href='/files/arena-city.pdf'
-                            download
-                            target='_blank'
-                          >
-                            Завантажити презентацію <span />
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div id='tab' className='tabs_item'>
-                    <div className='row align-items-center'>
-                      <div className='col-lg-6 col-md-12 image'>
-                        <div className='tabs_item_image'>
-                          <img
-                            src='./images/floorPlans/floor-4.png'
-                            alt='floor-plan'
-                          />
-                        </div>
-                      </div>
-                      <div className='col-lg-6 col-md-12 content'>
-                        <div className='tabs_item_content'>
-                          <h3>Поверх 4</h3>
-                          <p>
-                            Виберіть найбільш привабливий та комфортний для Вас
-                            офіс зі всіх доступних для оренди в нашому БЦ.
-                          </p>
-                          <PlansCarousel images={offices[3].images} />
-                          <a
-                            className='default-btn'
-                            href='/files/arena-city.pdf'
-                            download
-                            target='_blank'
-                          >
-                            Завантажити презентацію <span />
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div id='tab' className='tabs_item'>
-                    <div className='row align-items-center'>
-                      <div className='col-lg-6 col-md-12 image'>
-                        <div className='tabs_item_image'>
-                          <img
-                            src='./images/floorPlans/floor-5.png'
-                            alt='floor-plan'
-                          />
-                        </div>
-                      </div>
-                      <div className='col-lg-6 col-md-12 content'>
-                        <div className='tabs_item_content'>
-                          <h3>Поверх 5</h3>
-                          <p>
-                            Виберіть найбільш привабливий та комфортний для Вас
-                            офіс зі всіх доступних для оренди в нашому БЦ.
-                          </p>
-                          <PlansCarousel images={offices[4].images} />
-                          <a
-                            className='default-btn'
-                            href='/files/arena-city.pdf'
-                            download
-                            target='_blank'
-                          >
-                            Завантажити презентацію <span />
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div> */}
                 </div>
               </div>
             </div>

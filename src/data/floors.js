@@ -1,4 +1,4 @@
-export const floors = [
+export const tabs = [
   'Про\u00A0БЦ',
   'Поверх\u00A01',
   'Поверх\u00A02',
@@ -7,11 +7,11 @@ export const floors = [
   'Поверх\u00A05',
 ];
 
-export const floorsContentData = [
+export const floors = [
   {
     name: 'Поверх\u00A01',
-    floorPlan: './images/floorPlans/floor-1.png',
-    floorImages: [
+    plan: './images/floorPlans/floor-1.png',
+    images: [
       '/images/availableOffices/floor-1/A-1-1.jpg',
       '/images/availableOffices/floor-1/A-1-2.jpg',
       '/images/availableOffices/floor-1/A-1-3.jpg',
@@ -20,8 +20,8 @@ export const floorsContentData = [
   },
   {
     name: 'Поверх\u00A02',
-    floorPlan: './images/floorPlans/floor-2.png',
-    floorImages: [
+    plan: './images/floorPlans/floor-2.png',
+    images: [
       '/images/availableOffices/floor-2/B-1-1.jpg',
       '/images/availableOffices/floor-2/B-1-2.jpg',
       '/images/availableOffices/floor-2/B-1-3.jpg',
@@ -44,8 +44,8 @@ export const floorsContentData = [
   },
   {
     name: 'Поверх\u00A03',
-    floorPlan: './images/floorPlans/floor-3.png',
-    floorImages: [
+    plan: './images/floorPlans/floor-3.png',
+    images: [
       '/images/availableOffices/floor-3/C-13-1.jpg',
       '/images/availableOffices/floor-3/C-13-2.jpg',
       '/images/availableOffices/floor-3/C-13-3.jpg',
@@ -54,16 +54,13 @@ export const floorsContentData = [
   },
   {
     name: 'Поверх\u00A04',
-    floorPlan: './images/floorPlans/floor-4.png',
-    floorImages: [
-      // '/images/availableOffices/floor-4/plug.png',
-      '/images/availableOffices/floor-4/plug2.png',
-    ],
+    plan: './images/floorPlans/floor-4.png',
+    images: ['/images/availableOffices/floor-4/plug.png'],
   },
   {
     name: 'Поверх\u00A05',
-    floorPlan: './images/floorPlans/floor-5.png',
-    floorImages: [
+    plan: './images/floorPlans/floor-5.png',
+    images: [
       '/images/availableOffices/floor-5/F-6-1.jpg',
       '/images/availableOffices/floor-5/F-6-2.jpg',
       '/images/availableOffices/floor-5/F-6-3.jpg',

@@ -61,7 +61,4 @@ export const AdvantagesWrap = styled.div`
       height: 75px;
     }
   }
-  /* .single-services-box:hover .icon-additional {
-    fill: #06487e;
-  } */
 `;
