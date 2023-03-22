@@ -35,6 +35,17 @@ const FooterWrap = styled.div`
   .copyright-area {
     border-top: 1px solid #b6b092;
   }
+
+  @media (max-width: 767px) {
+    .footer-area {
+      padding-bottom: 60px;
+    }
+    .copyright-area {
+      margin-top: 30px;
+      padding: 0;
+      border: none;
+    }
+  }
 `;
 
 export { FooterWrap };

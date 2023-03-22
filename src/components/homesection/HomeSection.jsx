@@ -27,8 +27,8 @@ function HomeSection() {
         <div className='banner-footer'>
           <div className='container-fluid p-0'>
             <div className='row m-0 align-items-center'>
-              <div className='col-lg-5 col-md-12 p-0'></div>
-              <div className='col-lg-7 col-md-12 p-0'>
+              <div className='col-lg-5 col-md-12 p-0 resized'></div>
+              <div className='col-lg-7 col-md-12 p-0 resized-content'>
                 <div className='banner-contact-info'>
                   <ul>
                     <li>

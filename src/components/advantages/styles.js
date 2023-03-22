@@ -1,43 +1,53 @@
 import styled from 'styled-components';
 
 export const AdvantagesWrap = styled.div`
-  .single-services-box {
-    height: 248px;
+  #advantages {
+    padding-bottom: 0;
   }
 
-  @media (min-width: 480px) {
+  @media (max-width: 575px) {
+    .last {
+      margin-bottom: 0;
+    }
+  }
+
+  .single-services-box {
+    height: 226px;
+  }
+
+  @media (min-width: 440px) {
     .single-services-box {
-      height: 220px;
+      height: 200px;
     }
   }
 
   @media (min-width: 576px) {
     .single-services-box {
-      height: 260px;
+      height: 254px;
     }
   }
 
   @media (min-width: 768px) {
     .single-services-box {
-      height: 296px;
+      height: 286px;
     }
   }
 
   @media (min-width: 992px) {
     .single-services-box {
-      height: 321px;
+      height: 314px;
     }
   }
 
   @media (min-width: 1200px) {
     .single-services-box {
-      height: 329px;
+      height: 320px;
     }
   }
 
   @media (min-width: 1400px) {
     .single-services-box {
-      height: 298px;
+      height: 290px;
     }
   }
 
@@ -51,7 +61,4 @@ export const AdvantagesWrap = styled.div`
       height: 75px;
     }
   }
-  /* .single-services-box:hover .icon-additional {
-    fill: #06487e;
-  } */
 `;
