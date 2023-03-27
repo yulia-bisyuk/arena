@@ -1,24 +1,27 @@
+import { useTranslation } from 'react-i18next';
 import { FooterWrap } from './styles';
 
 const Footer = () => {
+  const { t } = useTranslation();
+  
   return (
     <FooterWrap id={'contacts'}>
       <footer className='footer-area'>
         <div className='container'>
           <div className='footer-positioning'>
             <div className='single-footer-widget'>
-              <h3>Контакти</h3>
+              <h3>{t('footer.contacts')}</h3>
               <ul className='footer-contact-info'>
                 <li>
-                  <span>Адреса:</span> <br />
-                  вул. Велика Васильківська / вул. Басейна, 1-3/2
+                  <span>{t('footer.address')}:</span> <br />
+                  {t('footer.addressDetails')}
                 </li>
-
+                
                 <li>
-                  <span>Телефон:</span> <br />
+                  <span>{t('footer.phone')}:</span> <br />
                   <a href='tel:+38 097 080-30-22'>+38 097 080 30 22</a> <br />
                   <br />
-                  <span>Електронна скринька:</span> <br />
+                  <span>{t('footer.email')}:</span> <br />
                   <a href='mailto:info@arena-city.com'>info@arena-city.com</a>
                 </li>
               </ul>
@@ -38,19 +41,19 @@ const Footer = () => {
           <div className='copyright-area'>
             <div className='row align-items-center'>
               <div className='col-lg-6 col-sm-6 col-md-6'>
-                <p>
-                  <i className='far fa-copyright' /> Arena City
+                <p style={{fontWeight: 700}}>
+                  <i style={{fontWeight: 700}} className='far fa-copyright' /> 2023 {t('footer.arenaCity')}
                 </p>
               </div>
               <div className='col-lg-6 col-sm-6 col-md-6'>
-                <ul>
-                  <li>
-                    <a href='/index2/#'>Політика приватності</a>
-                  </li>
-                  <li>
-                    <a href='/index2/#'>Умови користування</a>
-                  </li>
-                </ul>
+                {/*<ul>*/}
+                {/*  <li>*/}
+                {/*    <a href='/index2/#'>{t('footer.privacyPolicy')}</a>*/}
+                {/*  </li>*/}
+                {/*  <li>*/}
+                {/*    <a href='/index2/#'>{t('footer.termsOfUse')}</a>*/}
+                {/*  </li>*/}
+                {/*</ul>*/}
               </div>
             </div>
           </div>

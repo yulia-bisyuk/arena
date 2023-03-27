@@ -1,139 +1,132 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
+import {useState, useEffect} from 'react';
 import useMediaQuery from '../../hooks/useMediaQuery';
 import PlansCarousel from './PlansCarousel';
-import { PlansWrap } from './styles';
-import { tabs, floors } from '../../data/floors';
+import {useTranslation} from 'react-i18next';
+import {PlansWrap} from './styles';
+import {tabs_ua, tabs_en, floors} from '../../data/floors';
+// import {tabs_ua, tabs_en, floors} from '../../data/floors';
 
 function OfficePlans() {
   const [activeTab, setActiveTab] = useState(0);
   const [tabsContent, setTabsContent] = useState([]);
   const isMobile = useMediaQuery('(max-width: 991px)');
-
+  const {t, i18n} = useTranslation();
+  const tabs = i18n.language === 'en' ? tabs_en : tabs_ua;
+  
   useEffect(() => {
     setTabsContent(Array.from(document.querySelectorAll('#tab')));
   }, [isMobile]);
-
+  
   useEffect(() => {
-    // eslint-disable-next-line
     tabsContent.map((tab, index) => {
-      index === activeTab
+      return index === activeTab
         ? (tab.className = 'tabs_item visible')
         : (tab.className = 'tabs_item hidden');
     });
   }, [activeTab, tabsContent]);
-
+  
+  const getFloorButtons = () => {
+    return tabs.map((tab, index) => (
+      <li
+        key={index}
+        onClick={() => {
+          setActiveTab(index);
+        }}
+        className={index === activeTab ? 'current' : null}
+      >
+        {tab}
+      </li>
+    ))
+  }
+  
   return (
     <PlansWrap>
-      <section className='floor-plans-area ptb-100'>
-        <div className='container'>
-          <div className='section-title'>
-            <h2>Планування офісів</h2>
-            <p>
-              Ознайомтесь з плануванням офісів, завантаживши презентацію
-              бізнес-центру.
-            </p>
+      <section className="floor-plans-area ptb-100">
+        <div className="container">
+          <div className="section-title">
+            <h2>{t('officePlans.title')}</h2>
+            <p>{t('officePlans.description')}</p>
           </div>
-
-          <div className='row'>
-            <div className='col-lg-12 col-md-12'>
-              <div className='tab'>
-                <ul className='tabs'>
-                  {tabs.map((tab, index) => (
-                    <li
-                      key={index}
-                      onClick={() => {
-                        setActiveTab(index);
-                      }}
-                      className={index === activeTab && 'current'}
-                    >
-                      {tab}
-                    </li>
-                  ))}
+          
+          <div className="row">
+            <div className="col-lg-12 col-md-12">
+              <div className="tab">
+                <ul className="tabs">
+                  {getFloorButtons()}
                 </ul>
-                <div className='tab_content'>
-                  <div id='tab'>
-                    <div className='row align-items-center'>
-                      <div className='col-lg-6 col-md-12 content'>
-                        <div className='tabs_item_content'>
-                          <h3>БЦ "АРЕНА-СІТІ"</h3>
-                          <p>
-                            Комплекс побудований каркасно-монолітним способом.
-                            Всі внутрішні перегородки не несучі, що дозволяє
-                            проводити перепланування з урахуванням Ваших
-                            побажань. Усі необхідні комунікації підключені та
-                            повністю готові до експлуатації.
-                          </p>
-                          <ul className='features-list'>
+                <div className="tab_content">
+                  <div id="tab">
+                    <div className="row align-items-center">
+                      <div className="col-lg-6 col-md-12 content">
+                        <div className="tabs_item_content">
+                          <h3>{t('officePlans.arenaCity')}</h3>
+                          <p>{t('officePlans.arenaCityDescription')}</p>
+                          <ul className="features-list">
                             <li>
-                              Загальна площа <span>14 165,6 м2</span>
+                              {t('officePlans.totalArea')} <span>14 165 {i18n.language === 'en' ? 'm' : 'м'}<sup>2</sup></span>
                             </li>
                             <li>
-                              Поверхи <span>1-5</span>
+                              {t('officePlans.floors')} <span>1-6</span>
                             </li>
                             <li>
-                              Ліфти <span>9</span>
+                              {t('officePlans.lifts')} <span>9</span>
                             </li>
-
+                            
                             <li>
-                              Найменший офіс <span>35 м2</span>
+                              {t('officePlans.smallestOffice')} <span>35 {i18n.language === 'en' ? 'm' : 'м'}<sup>2</sup></span>
                             </li>
                             <li>
-                              Найбільший офіс <span>2500 м2</span>
+                              {t('officePlans.largestOffice')} <span>2500 {i18n.language === 'en' ? 'm' : 'м'}<sup>2</sup></span>
                             </li>
                           </ul>
                           <a
-                            className='default-btn'
-                            href='/files/arena-city.pdf'
+                            className="default-btn"
+                            href="/files/arena-city.pdf"
                             download
-                            target='_blank'
+                            target="_blank"
                           >
-                            Завантажити презентацію <span />
+                            {t('download_presentation')} <span/>
                           </a>
                         </div>
                       </div>
-                      <div className='col-lg-6 col-md-12 image'>
-                        <div className='tabs_item_image'>
+                      <div className="col-lg-6 col-md-12 image">
+                        <div className="tabs_item_image">
                           <img
-                            src='./images/floorPlans/1.jpeg'
-                            alt='floor-img'
-                            className='first'
+                            src="./images/floorPlans/1.jpeg"
+                            alt="floor-img"
+                            className="first"
                           />
                         </div>
                       </div>
                     </div>
                   </div>
-
+                  
                   {floors.map((floor, index) => {
                     return isMobile ? (
                       // mobile
-                      <div id='tab' className='tabs_item' key={index}>
-                        <div className='row align-items-center'>
-                          <div className='col-lg-6 col-md-12 content'>
-                            <div className='tabs_item_content'>
-                              <h3>{floor.name}</h3>
-                              <p>
-                                Виберіть найбільш привабливий та комфортний для
-                                Вас офіс зі всіх доступних для оренди в нашому
-                                БЦ.
-                              </p>
-                              <div className='col-lg-6 col-md-12 image'>
-                                <div className='tabs_item_image'>
+                      <div id="tab" className="tabs_item" key={index}>
+                        <div className="row align-items-center">
+                          <div className="col-lg-6 col-md-12 content">
+                            <div className="tabs_item_content">
+                              <h3>{tabs[index + 1].toUpperCase()}</h3>
+                              <div className="col-lg-6 col-md-12 image">
+                                <div className="tabs_item_image">
                                   <img
                                     src={floor.plan}
-                                    alt='floor-plan'
-                                    style={{ marginBottom: '20px' }}
+                                    alt="floor-plan"
+                                    style={{marginBottom: '20px'}}
                                   />
                                 </div>
                               </div>
-                              <PlansCarousel images={floor.images} />
+                              <PlansCarousel images={floor.images}/>
                               <a
-                                className='default-btn'
-                                href='/files/arena-city.pdf'
+                                className="default-btn"
+                                href="/files/arena-city.pdf"
                                 download
-                                target='_blank'
+                                target="_blank"
                               >
-                                Завантажити презентацію <span />
+                                {t('download_presentation')} <span/>
                               </a>
                             </div>
                           </div>
@@ -141,34 +134,28 @@ function OfficePlans() {
                       </div>
                     ) : (
                       // desktop
-                      <div id='tab' className='tabs_item' key={index}>
-                        <div className='row align-items-center'>
-                          <div className='col-lg-6 col-md-12 image'>
-                            <div className='tabs_item_image'>
-                              <img src={floor.plan} alt='floor-plan' />
+                      <div id="tab" className="tabs_item" key={index}>
+                        <div className="row align-items-center">
+                          <div className="col-lg-6 col-md-12 image">
+                            <div className="tabs_item_image">
+                              <img src={floor.plan} alt="floor-plan"/>
                             </div>
                           </div>
-                          <div className='col-lg-6 col-md-12 content'>
-                            <div className='tabs_item_content'>
-                              <h3>{floor.name}</h3>
-                              <p>
-                                Виберіть найбільш привабливий та комфортний для
-                                Вас офіс зі всіх доступних для оренди в нашому
-                                БЦ.
-                              </p>
-
+                          <div className="col-lg-6 col-md-12 content">
+                            <div className="tabs_item_content">
+                              <h3>{tabs[index + 1].toUpperCase()}</h3>
                               <PlansCarousel
                                 images={floor.images}
                                 key={index}
                               />
-
+                              
                               <a
-                                className='default-btn'
-                                href='/files/arena-city.pdf'
+                                className="default-btn"
+                                href="/files/arena-city.pdf"
                                 download
-                                target='_blank'
+                                target="_blank"
                               >
-                                Завантажити презентацію <span />
+                                {t('download_presentation')} <span/>
                               </a>
                             </div>
                           </div>

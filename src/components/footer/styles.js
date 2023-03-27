@@ -38,7 +38,7 @@ const FooterWrap = styled.div`
 
   @media (max-width: 767px) {
     .footer-area {
-      padding-bottom: 60px;
+      padding-bottom: 30px;
     }
     .copyright-area {
       margin-top: 30px;
