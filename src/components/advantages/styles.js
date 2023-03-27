@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const AdvantagesWrap = styled.div`
   #advantages {
     padding-bottom: 0;
+    padding-top: 40px;
   }
 
   @media (max-width: 575px) {

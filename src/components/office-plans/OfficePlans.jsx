@@ -5,7 +5,6 @@ import PlansCarousel from './PlansCarousel';
 import {useTranslation} from 'react-i18next';
 import {PlansWrap} from './styles';
 import {tabs_ua, tabs_en, floors} from '../../data/floors';
-// import {tabs_ua, tabs_en, floors} from '../../data/floors';
 
 function OfficePlans() {
   const [activeTab, setActiveTab] = useState(0);

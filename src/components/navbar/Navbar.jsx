@@ -3,7 +3,6 @@ import {NavbarWrapper} from './styles';
 import useOutsideAlerter from '../../hooks/useOutsideAlerter';
 import {useTranslation} from 'react-i18next';
 
-
 function Navbar({changeLanguage}) {
   const {t, i18n} = useTranslation();
   const {refForOutside, isShowed, setIsShowed} = useOutsideAlerter(false);

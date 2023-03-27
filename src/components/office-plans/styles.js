@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 
 const PlansWrap = styled.div`
+  .floor-plans-area {
+    padding-top: 40px;
+  }
+  
   .tab .tabs {
     margin-left: 0px;
     margin-right: 0px;

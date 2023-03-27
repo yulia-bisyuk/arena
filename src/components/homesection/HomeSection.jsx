@@ -7,9 +7,10 @@ function HomeSection({bgImg}) {
   return (
     <HomeWrap>
       <div className="home-section">
-        <div className="swiper swiper-initialized swiper-horizontal swiper-pointer-events home-slides swiper-backface-hidden">
+        <div
+          className="swiper swiper-initialized swiper-horizontal swiper-pointer-events home-slides swiper-backface-hidden">
           <div className="swiper-wrapper">
-            <div className="main-banner" style={{ backgroundImage: bgImg }}>
+            <div className="main-banner" style={{backgroundImage: bgImg}}>
               <div className="d-table">
                 <div className="d-table-cell">
                   <div className="container">
@@ -31,12 +32,12 @@ function HomeSection({bgImg}) {
                 <div className="banner-contact-info">
                   <ul>
                     <li>
-                      <i className="flaticon-location" />
+                      <i className="flaticon-location"/>
                       <span>{t('office_address')}</span>
-                      {t('address_text')}
+                      <a href="#contacts">{t('address_text')}</a>
                     </li>
                     <li>
-                      <i className="flaticon-call" />
+                      <i className="flaticon-call"/>
                       <span>{t('contacts')}</span>
                       <a href="tel:+38 097 080-30-22">+38 097 080 30 22</a>
                       <a href="mailto:info@arena-city.com">
@@ -44,7 +45,7 @@ function HomeSection({bgImg}) {
                       </a>
                     </li>
                     <li>
-                      <i className="flaticon-calendar" />
+                      <i className="flaticon-calendar"/>
                       <span>{t('working_hours')}</span>
                       {t('twenty_four_seven')}
                     </li>

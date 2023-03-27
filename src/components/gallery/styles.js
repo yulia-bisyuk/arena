@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 
 export const GalleryWrapper = styled.section`
+  .gallery-area {
+    padding-top: 40px;
+  }
+  
   .single-gallery-box {
     img {
       object-fit: cover;
