@@ -55,7 +55,7 @@ function Gallery() {
                   <div
                     className="single-gallery-box"
                     key={index}
-                    onClick={(evt) => {
+                    onClick={() => {
                       openLightbox(index);
                     }}>
                     <img
