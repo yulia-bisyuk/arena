@@ -40,10 +40,9 @@ function Gallery() {
                     <img
                       className="d-block w-100 carousel-img"
                       src={image}
-                      alt={"Business center in Kyiv" + index}
+                      alt={'Business center in Kyiv' + index}
                       width="380px"
                       height="420px"
-                      onClick={() => openLightbox(index)}
                     />
                   </Carousel.Item>
                 );
@@ -53,25 +52,26 @@ function Gallery() {
             <div className="shorting">
               <div className="row">
                 {gallery.map((image, index) => (
-                  <div className="single-gallery-box" key={index}>
+                  <div
+                    className="single-gallery-box"
+                    key={index}
+                    onClick={(evt) => {
+                      openLightbox(index);
+                    }}>
                     <img
                       src={image}
-                      alt={"Business center in Kyiv" + index}
-                      onClick={() => {
-                        console.log('index', index);
-                        openLightbox(index);
-                      }}
+                      alt={'Business center in Kyiv' + index}
                     />
                   </div>
                 ))}
-                {lightboxIsOpen && (
-                  <Lightbox
-                    startIndex={currentImage}
-                    onClose={closeLightbox}
-                    images={gallery.map((image) => ({ url: image }))}
-                  />
-                )}
               </div>
+              {lightboxIsOpen && (
+                <Lightbox
+                  startIndex={currentImage}
+                  onClose={closeLightbox}
+                  images={gallery.map((image) => ({url: image}))}
+                />
+              )}
             </div>
           )}
         </div>
