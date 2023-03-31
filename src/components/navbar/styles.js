@@ -15,7 +15,6 @@ export const NavbarWrapper = styled.nav`
 
   .call-us-top {
     display: flex;
-    flex-direction: column;
     align-items: center;
   }
 
@@ -30,6 +29,10 @@ export const NavbarWrapper = styled.nav`
     text-transform: uppercase;
     font-size: 14px;
     font-weight: 300;
+
+    @media (max-width: 574px) {
+      display: none;
+    }
   }
 
   .call-us-top span {
@@ -47,6 +50,9 @@ export const NavbarWrapper = styled.nav`
     background-color: #f1f4f4;
     text-align: center;
     transition: 0.5s;
+    @media (max-width: 479px) {
+      display: none;
+    }
   }
 
   nav a.default-btn {
@@ -58,9 +64,6 @@ export const NavbarWrapper = styled.nav`
     margin-left: 0;
   }
   @media (min-width: 480px) {
-    .call-us-top {
-      flex-direction: row;
-    }
     .call-us-top-icon-text-wrap {
       margin-bottom: 0px;
       margin-right: 6px;
