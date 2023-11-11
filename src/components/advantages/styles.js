@@ -24,7 +24,7 @@ export const AdvantagesWrap = styled.div`
 
   @media (min-width: 576px) {
     .single-services-box {
-      height: 254px;
+      height: 268px;
     }
   }
 

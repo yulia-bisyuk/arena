@@ -88,7 +88,6 @@ function Navbar({ changeLanguage }) {
                 <div className='others-option'>
                   <a
                     className='default-btn nav-presentation-btn'
-                    // href="/files/arena-city.pdf"
                     href={
                       i18n.language === 'en'
                         ? 'files/Arena-City-11-2023-EN.pdf'
@@ -96,7 +95,8 @@ function Navbar({ changeLanguage }) {
                     }
                     download
                     target='_blank'
-                  >
+                    rel='noreferrer'
+                 >
                     {t('download_presentation')} <span />
                   </a>
                 </div>

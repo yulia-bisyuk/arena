@@ -16,12 +16,24 @@ export const tabs_en = [
   '4\u00A0floor',
 ];
 
+export const plug_ua = {
+  noSpace: ['/images/availableOffices/plugs/no-offices-ua.png'],
+  noPhoto: ['/images/availableOffices/plugs/prepare-photos-ua.png'],
+};
+
+export const plug_en = {
+  noSpace: ['/images/availableOffices/plugs/no-offices-en.png'],
+  noPhoto: ['/images/availableOffices/plugs/prepare-photos-en.png'],
+};
+
 export const floors = [
   {
     name: 'Поверх\u00A01',
     plan: {
+
       ua: './images/floorPlans/floor-1.png',
       en: './images/floorPlans/floor-1n-en.png',
+
     },
     images: [
       '/images/availableOffices/floor-1/A-1-1.jpg',
@@ -33,14 +45,16 @@ export const floors = [
   {
     name: 'Поверх\u00A02',
     plan: {
+
       ua: './images/floorPlans/floor-2n.png',
       en: './images/floorPlans/floor-2n-en.png',
     },
+    
     images: [
-      // '/images/availableOffices/floor-2/B-1-1.jpg',
-      // '/images/availableOffices/floor-2/B-1-2.jpg',
-      // '/images/availableOffices/floor-2/B-1-3.jpg',
-      // '/images/availableOffices/floor-2/B-1-4.jpg',
+      //'/images/availableOffices/floor-2/B-1-1.jpg',
+      //'/images/availableOffices/floor-2/B-1-2.jpg',
+      //'/images/availableOffices/floor-2/B-1-3.jpg',
+      //'/images/availableOffices/floor-2/B-1-4.jpg',
       // '/images/availableOffices/floor-2/B-9-1.jpg',
       // '/images/availableOffices/floor-2/B-9-2.jpg',
       // '/images/availableOffices/floor-2/B-9-3.jpg',

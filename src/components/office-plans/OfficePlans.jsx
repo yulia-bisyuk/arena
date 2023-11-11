@@ -4,7 +4,7 @@ import useMediaQuery from '../../hooks/useMediaQuery';
 import PlansCarousel from './PlansCarousel';
 import { useTranslation } from 'react-i18next';
 import { PlansWrap } from './styles';
-import { tabs_ua, tabs_en, floors } from '../../data/floors';
+import { tabs_ua, tabs_en, plug_en, plug_ua, floors } from '../../data/floors';
 
 function OfficePlans() {
   const [activeTab, setActiveTab] = useState(0);
@@ -13,6 +13,9 @@ function OfficePlans() {
   const { t, i18n } = useTranslation();
   const tabs = i18n.language === 'en' ? tabs_en : tabs_ua;
 
+  //change plug here depending on if there no available space or just no photo
+  // for available space
+  const floorPlug = i18n.language === 'en' ? plug_en.noSpace : plug_ua.noSpace;
   useEffect(() => {
     setTabsContent(Array.from(document.querySelectorAll('#tab')));
   }, [isMobile]);
@@ -93,11 +96,13 @@ function OfficePlans() {
                             className='default-btn'
                             href={
                               i18n.language === 'en'
+
                                 ? 'files/Arena-City-11-2023-EN.pdf'
                                 : 'files/Арена-Сіті-11-2023.pdf'
                             }
                             download
                             target='_blank'
+                            rel='noreferrer'
                           >
                             {t('download_presentation')} <span />
                           </a>
@@ -136,7 +141,9 @@ function OfficePlans() {
                                   />
                                 </div>
                               </div>
+
                               <PlansCarousel images={floor.images} />
+
                               <a
                                 className='default-btn'
                                 href={
@@ -146,6 +153,7 @@ function OfficePlans() {
                                 }
                                 download
                                 target='_blank'
+                                rel='noreferrer'
                               >
                                 {t('download_presentation')} <span />
                               </a>
@@ -173,7 +181,11 @@ function OfficePlans() {
                             <div className='tabs_item_content'>
                               <h3>{tabs[index + 1].toUpperCase()}</h3>
                               <PlansCarousel
-                                images={floor.images}
+                                images={
+                                  floor.images.length !== 0
+                                    ? floor.images
+                                    : floorPlug
+                                }
                                 key={index}
                               />
 
@@ -186,6 +198,8 @@ function OfficePlans() {
                                 }
                                 download
                                 target='_blank'
+                                rel='noreferrer'
+
                               >
                                 {t('download_presentation')} <span />
                               </a>
