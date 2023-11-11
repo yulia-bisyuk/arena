@@ -126,7 +126,11 @@ function OfficePlans() {
                               <div className='col-lg-6 col-md-12 image'>
                                 <div className='tabs_item_image'>
                                   <img
-                                    src={floor.plan}
+                                    src={
+                                      i18n.language === 'en'
+                                        ? floor.plan.en
+                                        : floor.plan.ua
+                                    }
                                     alt='floor-plan'
                                     style={{ marginBottom: '20px' }}
                                   />
@@ -155,7 +159,14 @@ function OfficePlans() {
                         <div className='row align-items-center'>
                           <div className='col-lg-6 col-md-12 image'>
                             <div className='tabs_item_image'>
-                              <img src={floor.plan} alt='floor-plan' />
+                              <img
+                                src={
+                                  i18n.language === 'en'
+                                    ? floor.plan.en
+                                    : floor.plan.ua
+                                }
+                                alt='floor-plan'
+                              />
                             </div>
                           </div>
                           <div className='col-lg-6 col-md-12 content'>
