@@ -96,7 +96,6 @@ function OfficePlans() {
                             className='default-btn'
                             href={
                               i18n.language === 'en'
-
                                 ? 'files/Arena-City-11-2023-EN.pdf'
                                 : 'files/Арена-Сіті-11-2023.pdf'
                             }
@@ -111,7 +110,7 @@ function OfficePlans() {
                       <div className='col-lg-6 col-md-12 image'>
                         <div className='tabs_item_image'>
                           <img
-                            src='./images/floorPlans/1.jpeg'
+                            src='./images/floorPlans/1.jpg'
                             alt='floor-img'
                             className='first'
                           />
@@ -199,7 +198,6 @@ function OfficePlans() {
                                 download
                                 target='_blank'
                                 rel='noreferrer'
-
                               >
                                 {t('download_presentation')} <span />
                               </a>

@@ -30,10 +30,8 @@ export const floors = [
   {
     name: 'Поверх\u00A01',
     plan: {
-
-      ua: './images/floorPlans/floor-1.png',
+      ua: './images/floorPlans/floor-1-ua.png',
       en: './images/floorPlans/floor-1n-en.png',
-
     },
     images: [
       '/images/availableOffices/floor-1/A-1-1.jpg',
@@ -45,11 +43,10 @@ export const floors = [
   {
     name: 'Поверх\u00A02',
     plan: {
-
       ua: './images/floorPlans/floor-2n.png',
       en: './images/floorPlans/floor-2n-en.png',
     },
-    
+
     images: [
       //'/images/availableOffices/floor-2/B-1-1.jpg',
       //'/images/availableOffices/floor-2/B-1-2.jpg',
@@ -98,7 +95,6 @@ export const floors = [
       '/images/availableOffices/floor-3/C-18-2n.png',
       '/images/availableOffices/floor-3/C-18-3n.png',
       '/images/availableOffices/floor-3/C-18-4n.png',
-      ,
     ],
   },
   {
